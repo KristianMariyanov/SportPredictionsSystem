@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportPredictionsSystem.Web", "Web\SportPredictionsSystem.Web\SportPredictionsSystem.Web.csproj", "{63199012-C48F-4F24-96B7-9C60DCCE77C6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{27623A88-9C61-41AF-918C-AFC189B0DF4C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{7C368DC6-C1E8-4131-8C79-98ED45E3BB49}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportPredictionsSystem.Data", "Data\SportPredictionsSystem.Data\SportPredictionsSystem.Data.csproj", "{DCCF1B17-D9B6-4093-A049-396F31E00F61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportPredictionsSystem.Data.Models", "Data\SportPredictionsSystem.Data.Models\SportPredictionsSystem.Data.Models.csproj", "{F444AA9F-129A-46B9-B4D1-320446981A29}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportPredictionsSystem.Data.Contracts", "Data\SportPredictionsSystem.Data.Contracts\SportPredictionsSystem.Data.Contracts.csproj", "{2E967F02-90A8-46A1-88EF-43F36C79C9A8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{63199012-C48F-4F24-96B7-9C60DCCE77C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63199012-C48F-4F24-96B7-9C60DCCE77C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63199012-C48F-4F24-96B7-9C60DCCE77C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63199012-C48F-4F24-96B7-9C60DCCE77C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCCF1B17-D9B6-4093-A049-396F31E00F61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCCF1B17-D9B6-4093-A049-396F31E00F61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCCF1B17-D9B6-4093-A049-396F31E00F61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCCF1B17-D9B6-4093-A049-396F31E00F61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F444AA9F-129A-46B9-B4D1-320446981A29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F444AA9F-129A-46B9-B4D1-320446981A29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F444AA9F-129A-46B9-B4D1-320446981A29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F444AA9F-129A-46B9-B4D1-320446981A29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E967F02-90A8-46A1-88EF-43F36C79C9A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E967F02-90A8-46A1-88EF-43F36C79C9A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E967F02-90A8-46A1-88EF-43F36C79C9A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E967F02-90A8-46A1-88EF-43F36C79C9A8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{63199012-C48F-4F24-96B7-9C60DCCE77C6} = {27623A88-9C61-41AF-918C-AFC189B0DF4C}
+		{DCCF1B17-D9B6-4093-A049-396F31E00F61} = {7C368DC6-C1E8-4131-8C79-98ED45E3BB49}
+		{F444AA9F-129A-46B9-B4D1-320446981A29} = {7C368DC6-C1E8-4131-8C79-98ED45E3BB49}
+		{2E967F02-90A8-46A1-88EF-43F36C79C9A8} = {7C368DC6-C1E8-4131-8C79-98ED45E3BB49}
+	EndGlobalSection
+EndGlobal
