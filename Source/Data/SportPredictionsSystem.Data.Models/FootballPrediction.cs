@@ -11,9 +11,5 @@
         public string AwayTeam { get; set; }
 
         public string Prediction { get; set; }
-
-        public string AuthorId { get; set; }
-
-        public virtual User Author { get; set; }
     }
 }
