@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportPredictionsSystem.Data
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportPredictionsSystem.Data.Contracts", "Data\SportPredictionsSystem.Data.Contracts\SportPredictionsSystem.Data.Contracts.csproj", "{2E967F02-90A8-46A1-88EF-43F36C79C9A8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportPredictionsSystem.Common", "SportPredictionsSystem.Common\SportPredictionsSystem.Common.csproj", "{CFF8B769-01D2-486D-BB22-358DF050987B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportPredictionsSystem.Web.Resources", "Web\SportPredictionsSystem.Web.Resources\SportPredictionsSystem.Web.Resources.csproj", "{E50EC56B-5E75-4F1C-9851-E5CC60487C4C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +41,14 @@ Global
 		{2E967F02-90A8-46A1-88EF-43F36C79C9A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E967F02-90A8-46A1-88EF-43F36C79C9A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E967F02-90A8-46A1-88EF-43F36C79C9A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFF8B769-01D2-486D-BB22-358DF050987B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFF8B769-01D2-486D-BB22-358DF050987B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFF8B769-01D2-486D-BB22-358DF050987B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFF8B769-01D2-486D-BB22-358DF050987B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E50EC56B-5E75-4F1C-9851-E5CC60487C4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E50EC56B-5E75-4F1C-9851-E5CC60487C4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E50EC56B-5E75-4F1C-9851-E5CC60487C4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E50EC56B-5E75-4F1C-9851-E5CC60487C4C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,5 +58,6 @@ Global
 		{DCCF1B17-D9B6-4093-A049-396F31E00F61} = {7C368DC6-C1E8-4131-8C79-98ED45E3BB49}
 		{F444AA9F-129A-46B9-B4D1-320446981A29} = {7C368DC6-C1E8-4131-8C79-98ED45E3BB49}
 		{2E967F02-90A8-46A1-88EF-43F36C79C9A8} = {7C368DC6-C1E8-4131-8C79-98ED45E3BB49}
+		{E50EC56B-5E75-4F1C-9851-E5CC60487C4C} = {27623A88-9C61-41AF-918C-AFC189B0DF4C}
 	EndGlobalSection
 EndGlobal

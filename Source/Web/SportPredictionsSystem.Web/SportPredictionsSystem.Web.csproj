@@ -169,6 +169,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Areas\Administration\AdministrationAreaRegistration.cs" />
+    <Compile Include="Areas\Administration\Controllers\AdministrationController.cs" />
     <Compile Include="Config\NinjectWebCommon.cs" />
     <Compile Include="Config\BundleConfig.cs" />
     <Compile Include="Config\FilterConfig.cs" />
@@ -176,6 +178,7 @@
     <Compile Include="Config\RouteConfig.cs" />
     <Compile Include="Config\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -204,6 +207,13 @@
   <ItemGroup>
     <Content Include="Content\fonts\font-awesome\fontawesome-webfont.svg" />
     <Content Include="Content\images\soccer-stadium.jpg" />
+    <Content Include="Content\styles\administration\bootstrap-theme.css" />
+    <Content Include="Content\styles\administration\bootstrap-theme.min.css" />
+    <Content Include="Content\styles\administration\bootstrap.css" />
+    <Content Include="Content\styles\administration\bootstrap.min.css" />
+    <Content Include="Content\styles\administration\metisMenu.css" />
+    <Content Include="Content\styles\administration\sb-admin-2.css" />
+    <Content Include="Content\styles\administration\timeline.css" />
     <Content Include="Content\styles\bootstrap.css" />
     <Content Include="Content\styles\bootstrap.min.css" />
     <Content Include="Content\fonts\font-awesome\font-awesome.min.css" />
@@ -213,6 +223,8 @@
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\styles\Site.css" />
+    <Content Include="Scripts\administration\metisMenu.js" />
+    <Content Include="Scripts\administration\sb-admin-2.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Content\fonts\font-awesome\fontawesome-webfont.eot" />
@@ -220,6 +232,12 @@
     <Content Include="Content\fonts\font-awesome\fontawesome-webfont.woff" />
     <Content Include="Content\fonts\font-awesome\fontawesome-webfont.woff2" />
     <Content Include="Content\fonts\font-awesome\FontAwesome.otf" />
+    <Content Include="Areas\Administration\Views\web.config" />
+    <Content Include="Areas\Administration\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Administration\Views\Shared\_AdministrationLayout.cshtml" />
+    <Content Include="Areas\Administration\Views\Administration\Index.cshtml" />
+    <Content Include="Content\styles\administration\bootstrap-theme.css.map" />
+    <Content Include="Content\styles\administration\bootstrap.css.map" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -268,7 +286,10 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Areas\Administration\Models\" />
+    <Folder Include="Views\Base\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
@@ -288,6 +309,14 @@
     <ProjectReference Include="..\..\Data\SportPredictionsSystem.Data\SportPredictionsSystem.Data.csproj">
       <Project>{DCCF1B17-D9B6-4093-A049-396F31E00F61}</Project>
       <Name>SportPredictionsSystem.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SportPredictionsSystem.Common\SportPredictionsSystem.Common.csproj">
+      <Project>{CFF8B769-01D2-486D-BB22-358DF050987B}</Project>
+      <Name>SportPredictionsSystem.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SportPredictionsSystem.Web.Resources\SportPredictionsSystem.Web.Resources.csproj">
+      <Project>{e50ec56b-5e75-4f1c-9851-e5cc60487c4c}</Project>
+      <Name>SportPredictionsSystem.Web.Resources</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

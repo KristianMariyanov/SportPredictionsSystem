@@ -4,13 +4,13 @@
 
     using SportPredictionsSystem.Data;
 
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
         private ISportPredictionsSystemData data;
 
         public HomeController(ISportPredictionsSystemData data)
+            : base(data)
         {
-            this.data = data;
         }
 
         public ActionResult Index()

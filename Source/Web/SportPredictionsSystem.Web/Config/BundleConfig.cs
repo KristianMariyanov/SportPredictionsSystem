@@ -19,12 +19,23 @@
                     "~/Content/styles/site.css",
                     "~/Content/styles/override.css",
                     "~/Content/fonts/font-awesome/font-awesome.min.css"));
+
+            bundles.Add(new StyleBundle("~/Content/administration-css").Include(
+                    "~/Content/styles/administration/bootstrap.css",
+                    "~/Content/styles/administration/metisMenu.css",
+                    "~/Content/styles/administration/sb-admin-2.css",
+                    "~/Content/styles/administration/timeline.css",
+                    "~/Content/fonts/font-awesome/font-awesome.min.css"));
         }
 
         private static void RegisterScripts(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/administration-layout").Include(
+                        "~/Scripts/administration/metisMenu.js",
+                        "~/Scripts/administration/sb-admin-2.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
