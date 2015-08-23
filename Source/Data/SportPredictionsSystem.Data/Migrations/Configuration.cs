@@ -7,9 +7,9 @@ namespace SportPredictionsSystem.Data.Migrations
         public Configuration()
         {
             this.AutomaticMigrationsEnabled = true;
-            this.ContextKey = "SportPredictionsSystem.Data.SportPredictionsSystemDbContext";
+            this.AutomaticMigrationDataLossAllowed = true;
         }
-        
+
         protected override void Seed(SportPredictionsSystemDbContext context)
         {
             //  This method will be called after migrating to the latest version.
