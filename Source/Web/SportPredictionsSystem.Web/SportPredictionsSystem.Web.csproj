@@ -20,6 +20,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -29,6 +30,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>..\..\..\..\suls-master\Source\visual-studio-analyzers.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -39,6 +41,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=4.0.4.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\AutoMapper.4.0.4\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Ninject.3.2.0.0\lib\net45-full\Ninject.dll</HintPath>
@@ -171,6 +177,9 @@
   <ItemGroup>
     <Compile Include="Areas\Administration\AdministrationAreaRegistration.cs" />
     <Compile Include="Areas\Administration\Controllers\AdministrationController.cs" />
+    <Compile Include="Areas\Administration_Predictions\Administration_PredictionsAreaRegistration.cs" />
+    <Compile Include="Areas\Administration_Predictions\Controllers\FootballPredictionsController.cs" />
+    <Compile Include="Areas\Administration_Predictions\ViewModels\FootballPredictions\CreateFootballPredictionInputModel.cs" />
     <Compile Include="Config\NinjectWebCommon.cs" />
     <Compile Include="Config\BundleConfig.cs" />
     <Compile Include="Config\FilterConfig.cs" />
@@ -238,6 +247,13 @@
     <Content Include="Areas\Administration\Views\Administration\Index.cshtml" />
     <Content Include="Content\styles\administration\bootstrap-theme.css.map" />
     <Content Include="Content\styles\administration\bootstrap.css.map" />
+    <Content Include="Areas\Administration_Predictions\Views\web.config" />
+    <Content Include="Areas\Administration_Predictions\Views\FootballPredictions\Create.cshtml" />
+    <Content Include="Areas\Administration_Predictions\Views\FootballPredictions\Delete.cshtml" />
+    <Content Include="Areas\Administration_Predictions\Views\FootballPredictions\Details.cshtml" />
+    <Content Include="Areas\Administration_Predictions\Views\FootballPredictions\Edit.cshtml" />
+    <Content Include="Areas\Administration_Predictions\Views\FootballPredictions\Index.cshtml" />
+    <Content Include="Areas\Administration_Predictions\Views\_ViewStart.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -287,7 +303,8 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Areas\Administration\Models\" />
+    <Folder Include="Areas\Administration\ViewModels\" />
+    <Folder Include="Areas\Administration_Predictions\Views\Shared\" />
     <Folder Include="Views\Base\" />
   </ItemGroup>
   <ItemGroup>

@@ -1,0 +1,84 @@
+﻿@model SportPredictionsSystem.Data.Models.FootballPrediction
+
+<div>
+    <h4>FootballPrediction</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.HomeTeam)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HomeTeam)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AwayTeam)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AwayTeam)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Prediction)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Prediction)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MatchTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MatchTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Odd)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Odd)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsDeleted)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsDeleted)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DeletedOn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeletedOn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedOn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedOn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifiedOn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModifiedOn)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

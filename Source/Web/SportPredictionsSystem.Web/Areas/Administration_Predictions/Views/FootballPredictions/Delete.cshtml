@@ -1,0 +1,91 @@
+﻿@model SportPredictionsSystem.Data.Models.FootballPrediction
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>FootballPrediction</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.HomeTeam)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HomeTeam)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AwayTeam)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AwayTeam)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Prediction)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Prediction)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MatchTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MatchTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Odd)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Odd)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsDeleted)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsDeleted)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DeletedOn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeletedOn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedOn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedOn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifiedOn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModifiedOn)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
