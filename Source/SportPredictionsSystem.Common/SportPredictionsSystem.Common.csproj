@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="Constants\Assemblies.cs" />
     <Compile Include="Constants\GlobalConstants.cs" />
+    <Compile Include="Constants\ValidationConstants.cs" />
     <Compile Include="Mapping\AutoMapperConfig.cs" />
     <Compile Include="Mapping\IHaveCustomMappings.cs" />
     <Compile Include="Mapping\IMapFrom.cs" />

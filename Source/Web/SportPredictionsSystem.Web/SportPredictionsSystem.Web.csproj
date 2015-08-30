@@ -41,6 +41,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="AutoMapper, Version=4.0.4.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
       <HintPath>..\..\packages\AutoMapper.4.0.4\lib\net45\AutoMapper.dll</HintPath>
       <Private>True</Private>
@@ -119,10 +123,6 @@
       <Private>True</Private>
       <HintPath>..\..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
     </Reference>
-    <Reference Include="Antlr3.Runtime">
-      <Private>True</Private>
-      <HintPath>..\..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json">
@@ -179,7 +179,13 @@
     <Compile Include="Areas\Administration\Controllers\AdministrationController.cs" />
     <Compile Include="Areas\Administration_Predictions\Administration_PredictionsAreaRegistration.cs" />
     <Compile Include="Areas\Administration_Predictions\Controllers\FootballPredictionsController.cs" />
-    <Compile Include="Areas\Administration_Predictions\ViewModels\FootballPredictions\CreateFootballPredictionInputModel.cs" />
+    <Compile Include="Areas\Administration_Predictions\InputModels\FootballPredictions\BaseFootballPredictionInputModel.cs" />
+    <Compile Include="Areas\Administration_Predictions\InputModels\FootballPredictions\CreateFootballPredictionInputModel.cs" />
+    <Compile Include="Areas\Administration_Predictions\InputModels\FootballPredictions\EditFootballPredictionInputModel.cs" />
+    <Compile Include="Areas\Administration_Predictions\ViewModels\FootballPredictions\FootballPredictionViewModel.cs" />
+    <Compile Include="Areas\Administration_Users\Administration_UsersAreaRegistration.cs" />
+    <Compile Include="Areas\Administration_Users\Controllers\UsersController.cs" />
+    <Compile Include="Areas\Administration_Users\ViewModels\Users\UserViewModel.cs" />
     <Compile Include="Config\NinjectWebCommon.cs" />
     <Compile Include="Config\BundleConfig.cs" />
     <Compile Include="Config\FilterConfig.cs" />
@@ -254,6 +260,7 @@
     <Content Include="Areas\Administration_Predictions\Views\FootballPredictions\Edit.cshtml" />
     <Content Include="Areas\Administration_Predictions\Views\FootballPredictions\Index.cshtml" />
     <Content Include="Areas\Administration_Predictions\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Administration_Users\Views\web.config" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -305,6 +312,9 @@
   <ItemGroup>
     <Folder Include="Areas\Administration\ViewModels\" />
     <Folder Include="Areas\Administration_Predictions\Views\Shared\" />
+    <Folder Include="Areas\Administration_Users\InputModels\" />
+    <Folder Include="Areas\Administration_Users\Views\Shared\" />
+    <Folder Include="Areas\Administration_Users\Views\Users\" />
     <Folder Include="Views\Base\" />
   </ItemGroup>
   <ItemGroup>

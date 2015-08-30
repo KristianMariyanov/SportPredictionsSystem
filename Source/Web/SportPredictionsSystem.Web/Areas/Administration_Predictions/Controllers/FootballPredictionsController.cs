@@ -3,11 +3,14 @@
     using System.Linq;
     using System.Net;
     using System.Web.Mvc;
+    using System.Web.UI.HtmlControls;
 
     using AutoMapper;
+    using AutoMapper.QueryableExtensions;
 
     using SportPredictionsSystem.Data;
     using SportPredictionsSystem.Data.Models;
+    using SportPredictionsSystem.Web.Areas.Administration_Predictions.InputModels.FootballPredictions;
     using SportPredictionsSystem.Web.Areas.Administration_Predictions.ViewModels.FootballPredictions;
     using SportPredictionsSystem.Web.Controllers;
 
@@ -20,7 +23,7 @@
 
         public ActionResult Index()
         {
-            return this.View(this.Data.FootballPredictions.All().ToList());
+            return this.View(this.Data.FootballPredictions.All().Project().To<FootballPredictionViewModel>().ToList());
         }
 
         public ActionResult Details(int? id)
@@ -42,12 +45,12 @@
 
         public ActionResult Create()
         {
-            return this.View(new CreateFootballPredictionInputModel());
+            return this.View(new BaseFootballPredictionInputModel());
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(CreateFootballPredictionInputModel inputModel)
+        public ActionResult Create(BaseFootballPredictionInputModel inputModel)
         {
             if (this.ModelState.IsValid)
             {
@@ -68,7 +71,8 @@
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
 
-            var footballPrediction = this.Data.FootballPredictions.GetById(id);
+            var footballPrediction = this.Data.FootballPredictions.All().Project().To<EditFootballPredictionInputModel>().FirstOrDefault();
+
             if (footballPrediction == null)
             {
                 return this.HttpNotFound();
@@ -79,16 +83,18 @@
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,HomeTeam,AwayTeam,Prediction,MatchTime,Odd,IsDeleted,DeletedOn,CreatedOn,ModifiedOn")] FootballPrediction footballPrediction)
+        public ActionResult Edit(EditFootballPredictionInputModel inputModel)
         {
             if (this.ModelState.IsValid)
             {
-                this.Data.FootballPredictions.Update(footballPrediction);
+                var entity = this.Data.FootballPredictions.GetById(inputModel.Id);
+                var entityForUpdate = Mapper.Map(inputModel, entity);
+                this.Data.FootballPredictions.Update(entityForUpdate);
                 this.Data.SaveChanges();
                 return this.RedirectToAction("Index");
             }
 
-            return this.View(footballPrediction);
+            return this.View(inputModel);
         }
 
         public ActionResult Delete(int? id)
@@ -98,7 +104,13 @@
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
 
-            var footballPrediction = this.Data.FootballPredictions.GetById(id);
+            var footballPrediction = this.Data.FootballPredictions
+                .All()
+                .Where(fp => fp.Id == id)
+                .Project()
+                .To<FootballPredictionViewModel>()
+                .FirstOrDefault();
+
             if (footballPrediction == null)
             {
                 return this.HttpNotFound();
@@ -107,9 +119,9 @@
             return this.View(footballPrediction);
         }
 
-        [HttpPost, ActionName("Delete")]
+        [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
+        public ActionResult Delete(int id)
         {
             var footballPrediction = this.Data.FootballPredictions.GetById(id);
             this.Data.FootballPredictions.Delete(footballPrediction);

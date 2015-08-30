@@ -7,9 +7,7 @@
 
     public interface ISportPredictionsSystemData : IDisposable
     {
-
         IDeletableEntityRepository<FootballPrediction> FootballPredictions { get; }
-
 
         IDeletableEntityRepository<User> Users { get; }
 
