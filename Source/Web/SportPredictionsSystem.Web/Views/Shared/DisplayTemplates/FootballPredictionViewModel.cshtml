@@ -1,0 +1,20 @@
+﻿@model SportPredictionsSystem.Web.ViewModels.FootballPredictionViewModel
+
+<tr>
+    <td>@Model.DayOfPrediction.ToLongDateString()</td>
+    <td>@Model.HomeTeam</td>
+    <td>@Model.AwayTeam</td>
+    <td>@Model.Prediction</td>
+    <td>@Model.Odd</td>
+    <td>@Model.Result</td>
+    <td>
+        @if (Model.Win)
+        {
+            <span class="label label-success">Win</span>
+        }
+        else
+        {
+            <span class="label label-danger">Lose</span>
+        }
+    </td>
+</tr>

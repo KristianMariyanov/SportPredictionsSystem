@@ -11,5 +11,9 @@
         public decimal Odd { get; set; }
 
         public DateTime DayOfPrediction { get; set; }
+
+        public string Result { get; set; }
+
+        public bool Win { get; set; }
     }
 }

@@ -1,10 +1,21 @@
-﻿@using System.Web.UI.WebControls
+﻿@model IEnumerable<SportPredictionsSystem.Web.ViewModels.FootballPredictionViewModel>
+
 @{
     ViewBag.Title = "Home Page";
 }
 
 @section styles {
     @Styles.Render("~/Content/styles/home/home.css")
+    <style>
+        .predictions-table {
+            background-color: #354458;
+            margin-top: 30px;
+        }
+
+            .predictions-table thead tr th, .predictions-table tbody tr td {
+                padding: 15px;
+            }
+    </style>
 }
 
 <div class="intro-header">
@@ -58,5 +69,28 @@
                 <a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a>
             </p>
         </div>
+    </div>
+
+    <div class="row">
+        <h2>История на прогнози</h2>
+        @if (Model.Any())
+        {
+            <table class="table table-striped table-hover predictions-table">
+                <thead>
+                    <tr>
+                        <th>Ден</th>
+                        <th>Домакин</th>
+                        <th>Гост</th>
+                        <th>Прогноза</th>
+                        <th>Коефициент</th>
+                        <th>Резултат</th>
+                        <th>Печалба?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @Html.DisplayFor(x => x)
+                </tbody>
+            </table>
+        }
     </div>
 </div>

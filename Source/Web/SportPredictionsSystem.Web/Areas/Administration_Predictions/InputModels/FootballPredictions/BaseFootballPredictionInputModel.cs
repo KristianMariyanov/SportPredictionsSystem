@@ -39,5 +39,8 @@
 
         [Display(Name = "Начало на мача")]
         public DateTime MatchTime { get; set; }
+
+        [Display(Name = "Дата на прогнозата")]
+        public DateTime DayOfPrediction { get; set; }
     }
 }
