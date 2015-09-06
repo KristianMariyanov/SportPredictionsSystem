@@ -9,6 +9,8 @@
     {
         IDbSet<User> Users { get; set; }
 
+        IDbSet<Country> Countries { get; set; }
+
         IDbSet<FootballPrediction> FootballPredictions { get; set; }
 
         int SaveChanges();

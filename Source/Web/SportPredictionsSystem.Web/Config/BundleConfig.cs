@@ -17,15 +17,13 @@
             bundles.Add(new StyleBundle("~/Content/css").Include(
                     "~/Content/styles/bootstrap.css",
                     "~/Content/styles/site.css",
-                    "~/Content/styles/override.css",
-                    "~/Content/fonts/font-awesome/font-awesome.min.css"));
+                    "~/Content/styles/override.css"));
 
             bundles.Add(new StyleBundle("~/Content/administration-css").Include(
                     "~/Content/styles/administration/bootstrap.css",
                     "~/Content/styles/administration/metisMenu.css",
                     "~/Content/styles/administration/sb-admin-2.css",
-                    "~/Content/styles/administration/timeline.css",
-                    "~/Content/fonts/font-awesome/font-awesome.min.css"));
+                    "~/Content/styles/administration/timeline.css"));
         }
 
         private static void RegisterScripts(BundleCollection bundles)

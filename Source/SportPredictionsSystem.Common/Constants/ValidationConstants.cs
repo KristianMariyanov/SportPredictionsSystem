@@ -12,5 +12,12 @@
         public const int PredictionMaxLenght = 10;
 
         #endregion
+
+        #region Address
+
+        public const int CountryNameMaxLength = 150;
+
+        #endregion
+
     }
 }

@@ -185,6 +185,7 @@
     <Compile Include="Areas\Administration_Predictions\ViewModels\FootballPredictions\FootballPredictionViewModel.cs" />
     <Compile Include="Areas\Administration_Users\Administration_UsersAreaRegistration.cs" />
     <Compile Include="Areas\Administration_Users\Controllers\UsersController.cs" />
+    <Compile Include="Areas\Administration_Users\InputModels\Users\EditUserInputModel.cs" />
     <Compile Include="Areas\Administration_Users\ViewModels\Users\UserViewModel.cs" />
     <Compile Include="Config\NinjectWebCommon.cs" />
     <Compile Include="Config\BundleConfig.cs" />
@@ -261,6 +262,10 @@
     <Content Include="Areas\Administration_Predictions\Views\FootballPredictions\Index.cshtml" />
     <Content Include="Areas\Administration_Predictions\Views\_ViewStart.cshtml" />
     <Content Include="Areas\Administration_Users\Views\web.config" />
+    <Content Include="Areas\Administration_Users\Views\Users\Index.cshtml" />
+    <Content Include="Areas\Administration_Users\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Administration_Users\Views\Users\Edit.cshtml" />
+    <None Include="Properties\PublishProfiles\KingKongTips Live.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -312,9 +317,7 @@
   <ItemGroup>
     <Folder Include="Areas\Administration\ViewModels\" />
     <Folder Include="Areas\Administration_Predictions\Views\Shared\" />
-    <Folder Include="Areas\Administration_Users\InputModels\" />
     <Folder Include="Areas\Administration_Users\Views\Shared\" />
-    <Folder Include="Areas\Administration_Users\Views\Users\" />
     <Folder Include="Views\Base\" />
   </ItemGroup>
   <ItemGroup>

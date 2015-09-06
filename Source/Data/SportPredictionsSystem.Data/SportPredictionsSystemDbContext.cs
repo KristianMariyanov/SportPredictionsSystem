@@ -23,8 +23,10 @@
             : base(nameOrConnectionString, false)
         {
         }
-        
+
         public virtual IDbSet<FootballPrediction> FootballPredictions { get; set; }
+
+        public virtual IDbSet<Country> Countries { get; set; }
 
         public static SportPredictionsSystemDbContext Create()
         {

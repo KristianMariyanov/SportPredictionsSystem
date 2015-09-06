@@ -9,5 +9,7 @@
 
         [Range(0, int.MaxValue)]
         public decimal Odd { get; set; }
+
+        public DateTime DayOfPrediction { get; set; }
     }
 }

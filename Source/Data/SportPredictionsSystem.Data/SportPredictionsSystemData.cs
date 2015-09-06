@@ -18,36 +18,17 @@
         }
 
 
-        public IDeletableEntityRepository<FootballPrediction> FootballPredictions
-        {
-            get
-            {
-                return this.GetDeletableEntityRepository<FootballPrediction>();
-            }
-        }
+        public IDeletableEntityRepository<FootballPrediction> FootballPredictions => this.GetDeletableEntityRepository<FootballPrediction>();
 
-        public IDeletableEntityRepository<User> Users
-        {
-            get
-            {
-                return this.GetDeletableEntityRepository<User>();
-            }
-        }
+        public IDeletableEntityRepository<User> Users => this.GetDeletableEntityRepository<User>();
 
-        public ISportPredictionsSystemDbContext Context
-        {
-            get
-            {
-                return this.dbContext;
-            }
-        }
+        public IRepository<Country> Countries => this.GetRepository<Country>();
+
+        public ISportPredictionsSystemDbContext Context => this.dbContext;
 
         public void Dispose()
         {
-            if (this.dbContext != null)
-            {
-                this.dbContext.Dispose();
-            }
+            this.dbContext?.Dispose();
         }
 
         public int SaveChanges()

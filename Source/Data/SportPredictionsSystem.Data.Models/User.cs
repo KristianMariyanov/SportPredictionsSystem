@@ -16,6 +16,16 @@
             this.CreatedOn = DateTime.Now;
         }
 
+        public string DisplayName { get; set; }
+
+        public bool HasPayment { get; set; }
+
+        public int? CountryId { get; set; }
+
+        public virtual Country Country { get; set; }
+
+        public string LastIpAddress { get; set; }
+
         public DateTime CreatedOn { get; set; }
 
         public bool PreserveCreatedOn { get; set; }
