@@ -49,6 +49,14 @@
       <HintPath>..\..\packages\AutoMapper.4.0.4\lib\net45\AutoMapper.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Hangfire.Core, Version=1.4.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Hangfire.Core.1.4.6\lib\net45\Hangfire.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Hangfire.SqlServer, Version=1.4.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Hangfire.SqlServer.1.4.6\lib\net45\Hangfire.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Ninject.3.2.0.0\lib\net45-full\Ninject.dll</HintPath>
@@ -279,7 +287,9 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -346,6 +356,10 @@
     <ProjectReference Include="..\..\SportPredictionsSystem.Common\SportPredictionsSystem.Common.csproj">
       <Project>{CFF8B769-01D2-486D-BB22-358DF050987B}</Project>
       <Name>SportPredictionsSystem.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SportPredictionsSystem.Web.Infrastructure\SportPredictionsSystem.Web.Infrastructure.csproj">
+      <Project>{489f1b02-e9b4-40cf-9b8b-30adcbcb66b8}</Project>
+      <Name>SportPredictionsSystem.Web.Infrastructure</Name>
     </ProjectReference>
     <ProjectReference Include="..\SportPredictionsSystem.Web.Resources\SportPredictionsSystem.Web.Resources.csproj">
       <Project>{e50ec56b-5e75-4f1c-9851-e5cc60487c4c}</Project>

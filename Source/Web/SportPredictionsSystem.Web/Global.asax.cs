@@ -7,6 +7,8 @@
     using System.Web.Optimization;
     using System.Web.Routing;
 
+    using Hangfire;
+
     using SportPredictionsSystem.Common.Mapping;
     using SportPredictionsSystem.Data;
     using SportPredictionsSystem.Data.Migrations;
@@ -27,6 +29,9 @@
                     Assembly.GetExecutingAssembly()
                 });
             autoMapperConfig.Execute();
+
+            // Hangfire configuration
+            GlobalConfiguration.Configuration.UseSqlServerStorage("DefaultConnection");
         }
     }
 }

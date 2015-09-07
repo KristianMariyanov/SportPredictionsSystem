@@ -2,8 +2,9 @@
 {
     using System;
 
+    using Hangfire;
+
     using Microsoft.AspNet.Identity;
-    using Microsoft.AspNet.Identity.EntityFramework;
     using Microsoft.AspNet.Identity.Owin;
     using Microsoft.Owin;
     using Microsoft.Owin.Security.Cookies;
@@ -12,7 +13,7 @@
 
     using SportPredictionsSystem.Data;
     using SportPredictionsSystem.Data.Models;
-    using SportPredictionsSystem.Web.Models;
+    using SportPredictionsSystem.Web.Infrastructure.Filters;
 
     public partial class Startup
     {
@@ -49,6 +50,13 @@
             // Once you check this option, your second step of verification during the login process will be remembered on the device where you logged in from.
             // This is similar to the RememberMe option when you log in.
             app.UseTwoFactorRememberBrowserCookie(DefaultAuthenticationTypes.TwoFactorRememberBrowserCookie);
+
+            app.UseHangfireDashboard("/hangfire", new DashboardOptions
+            {
+                AuthorizationFilters = new[] { new HangFireAuthorizationFilter() }
+            });
+
+            app.UseHangfireServer();
 
             // Uncomment the following lines to enable logging in with third party login providers
             //app.UseMicrosoftAccountAuthentication(

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportPredictionsSystem.Web", "Web\SportPredictionsSystem.Web\SportPredictionsSystem.Web.csproj", "{63199012-C48F-4F24-96B7-9C60DCCE77C6}"
 EndProject
@@ -18,6 +18,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportPredictionsSystem.Common", "SportPredictionsSystem.Common\SportPredictionsSystem.Common.csproj", "{CFF8B769-01D2-486D-BB22-358DF050987B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportPredictionsSystem.Web.Resources", "Web\SportPredictionsSystem.Web.Resources\SportPredictionsSystem.Web.Resources.csproj", "{E50EC56B-5E75-4F1C-9851-E5CC60487C4C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportPredictionsSystem.Web.Infrastructure", "Web\SportPredictionsSystem.Web.Infrastructure\SportPredictionsSystem.Web.Infrastructure.csproj", "{489F1B02-E9B4-40CF-9B8B-30ADCBCB66B8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +51,10 @@ Global
 		{E50EC56B-5E75-4F1C-9851-E5CC60487C4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E50EC56B-5E75-4F1C-9851-E5CC60487C4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E50EC56B-5E75-4F1C-9851-E5CC60487C4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{489F1B02-E9B4-40CF-9B8B-30ADCBCB66B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{489F1B02-E9B4-40CF-9B8B-30ADCBCB66B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{489F1B02-E9B4-40CF-9B8B-30ADCBCB66B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{489F1B02-E9B4-40CF-9B8B-30ADCBCB66B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -59,5 +65,6 @@ Global
 		{F444AA9F-129A-46B9-B4D1-320446981A29} = {7C368DC6-C1E8-4131-8C79-98ED45E3BB49}
 		{2E967F02-90A8-46A1-88EF-43F36C79C9A8} = {7C368DC6-C1E8-4131-8C79-98ED45E3BB49}
 		{E50EC56B-5E75-4F1C-9851-E5CC60487C4C} = {27623A88-9C61-41AF-918C-AFC189B0DF4C}
+		{489F1B02-E9B4-40CF-9B8B-30ADCBCB66B8} = {27623A88-9C61-41AF-918C-AFC189B0DF4C}
 	EndGlobalSection
 EndGlobal
