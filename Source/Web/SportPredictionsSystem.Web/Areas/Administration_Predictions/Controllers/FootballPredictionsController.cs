@@ -8,11 +8,14 @@
     using AutoMapper;
     using AutoMapper.QueryableExtensions;
 
+    using Hangfire;
+
     using SportPredictionsSystem.Data;
     using SportPredictionsSystem.Data.Models;
     using SportPredictionsSystem.Web.Areas.Administration_Predictions.InputModels.FootballPredictions;
     using SportPredictionsSystem.Web.Areas.Administration_Predictions.ViewModels.FootballPredictions;
     using SportPredictionsSystem.Web.Controllers;
+    using SportPredictionsSystem.Web.Models;
 
     public class FootballPredictionsController : BaseController
     {
@@ -58,7 +61,11 @@
 
                 this.Data.FootballPredictions.Add(entity);
                 this.Data.SaveChanges();
+
+                BackgroundJob.Enqueue(() => SendEmail());
+
                 return this.RedirectToAction("Index");
+
             }
 
             return this.View(inputModel);
@@ -128,15 +135,15 @@
             this.Data.SaveChanges();
             return this.RedirectToAction("Index");
         }
-
-        protected override void Dispose(bool disposing)
+        
+        public static void SendEmail()
         {
-            if (disposing)
+            var emailModel = new NewFootballPredictionEmail
             {
-                this.Data.Dispose();
-            }
+                To = "vladislav.karamfilov@gmail.com"
+            };
 
-            base.Dispose(disposing);
+            emailModel.Send();
         }
     }
 }

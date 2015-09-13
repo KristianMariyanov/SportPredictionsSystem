@@ -195,3 +195,4 @@ FakesAssemblies/
 # Visual Studio 6 workspace options file
 *.opt
 /Source/Web/SportPredictionsSystem.Web/Web.Release.config
+/Source/Web/SportPredictionsSystem.Web/Web.Release.config
