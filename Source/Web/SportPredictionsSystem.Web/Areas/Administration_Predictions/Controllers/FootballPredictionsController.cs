@@ -10,6 +10,8 @@
 
     using Hangfire;
 
+    using Microsoft.Ajax.Utilities;
+
     using SportPredictionsSystem.Data;
     using SportPredictionsSystem.Data.Models;
     using SportPredictionsSystem.Web.Areas.Administration_Predictions.InputModels.FootballPredictions;
@@ -136,14 +138,19 @@
             return this.RedirectToAction("Index");
         }
         
-        public static void SendEmail()
+        public void SendEmail()
         {
-            var emailModel = new NewFootballPredictionEmail
-            {
-                To = "vladislav.karamfilov@gmail.com"
-            };
+            var users = this.Data.Users.All().Where(x => x.HasPayment).ToList();
 
-            emailModel.Send();
+            foreach (var user in users)
+            {
+                var emailModel = new NewFootballPredictionEmail
+                {
+                    To = user.Email
+                };
+
+                emailModel.Send();
+            }
         }
     }
 }
