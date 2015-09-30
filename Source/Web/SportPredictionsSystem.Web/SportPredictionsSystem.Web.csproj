@@ -213,6 +213,7 @@
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PayPalController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -228,6 +229,7 @@
     <Compile Include="Models\ManageLoginsViewModel.cs" />
     <Compile Include="Models\ConfigureTwoFactorViewModel.cs" />
     <Compile Include="Models\NewFootballPredictionEmail.cs" />
+    <Compile Include="Models\PayPal\PayPalModel.cs" />
     <Compile Include="Models\RegisterViewModel.cs" />
     <Compile Include="Models\ResetPasswordViewModel.cs" />
     <Compile Include="Models\SendCodeViewModel.cs" />
@@ -346,6 +348,7 @@
     <Folder Include="Areas\Administration_Predictions\Views\Shared\" />
     <Folder Include="Areas\Administration_Users\Views\Shared\" />
     <Folder Include="Views\Base\" />
+    <Folder Include="Views\PayPal\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
